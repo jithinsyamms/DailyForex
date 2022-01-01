@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		5D327D61278025A50038ED6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D60278025A50038ED6E /* AppDelegate.swift */; };
 		5D327D63278025A50038ED6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D62278025A50038ED6E /* SceneDelegate.swift */; };
-		5D327D65278025A50038ED6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D64278025A50038ED6E /* ViewController.swift */; };
 		5D327D68278025A50038ED6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D327D66278025A50038ED6E /* Main.storyboard */; };
 		5D327D6A278025A80038ED6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D327D69278025A80038ED6E /* Assets.xcassets */; };
 		5D327D6D278025A80038ED6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D327D6B278025A80038ED6E /* LaunchScreen.storyboard */; };
 		5D327D78278025A80038ED6E /* DailyForexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D77278025A80038ED6E /* DailyForexTests.swift */; };
 		5D327D83278025A80038ED6E /* DailyForexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D82278025A80038ED6E /* DailyForexUITests.swift */; };
+		5D327D962780273A0038ED6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D952780273A0038ED6E /* Constants.swift */; };
+		5D327D9A2780277C0038ED6E /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D992780277C0038ED6E /* APIResource.swift */; };
+		5D327D9C2780279D0038ED6E /* ForexResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D9B2780279D0038ED6E /* ForexResource.swift */; };
+		5D327D9E278027C30038ED6E /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D9D278027C30038ED6E /* NetworkRequest.swift */; };
+		5D327DA0278027E40038ED6E /* ForexRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D9F278027E40038ED6E /* ForexRequest.swift */; };
+		5D327DA2278027FC0038ED6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DA1278027FC0038ED6E /* NetworkError.swift */; };
+		5D327DA4278028230038ED6E /* ForexDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DA3278028230038ED6E /* ForexDataModel.swift */; };
+		5D327DA6278028610038ED6E /* Forex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DA5278028610038ED6E /* Forex.swift */; };
+		5D327DA9278029230038ED6E /* ForexListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DA8278029230038ED6E /* ForexListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,6 @@
 		5D327D5D278025A50038ED6E /* DailyForex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyForex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D327D60278025A50038ED6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D327D62278025A50038ED6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D327D64278025A50038ED6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D327D67278025A50038ED6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D327D69278025A80038ED6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D327D6C278025A80038ED6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,15 @@
 		5D327D7E278025A80038ED6E /* DailyForexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyForexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D327D82278025A80038ED6E /* DailyForexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexUITests.swift; sourceTree = "<group>"; };
 		5D327D84278025A80038ED6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D327D952780273A0038ED6E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D327D992780277C0038ED6E /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		5D327D9B2780279D0038ED6E /* ForexResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexResource.swift; sourceTree = "<group>"; };
+		5D327D9D278027C30038ED6E /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		5D327D9F278027E40038ED6E /* ForexRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexRequest.swift; sourceTree = "<group>"; };
+		5D327DA1278027FC0038ED6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		5D327DA3278028230038ED6E /* ForexDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexDataModel.swift; sourceTree = "<group>"; };
+		5D327DA5278028610038ED6E /* Forex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forex.swift; sourceTree = "<group>"; };
+		5D327DA8278029230038ED6E /* ForexListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,13 @@
 		5D327D5F278025A50038ED6E /* DailyForex */ = {
 			isa = PBXGroup;
 			children = (
+				5D327D90278025CE0038ED6E /* Model */,
+				5D327D91278025D70038ED6E /* Views */,
+				5D327D92278025EE0038ED6E /* ViewModel */,
+				5D327D93278026040038ED6E /* Networking */,
+				5D327D94278026370038ED6E /* Constants */,
 				5D327D60278025A50038ED6E /* AppDelegate.swift */,
 				5D327D62278025A50038ED6E /* SceneDelegate.swift */,
-				5D327D64278025A50038ED6E /* ViewController.swift */,
 				5D327D66278025A50038ED6E /* Main.storyboard */,
 				5D327D69278025A80038ED6E /* Assets.xcassets */,
 				5D327D6B278025A80038ED6E /* LaunchScreen.storyboard */,
@@ -126,6 +146,74 @@
 				5D327D84278025A80038ED6E /* Info.plist */,
 			);
 			path = DailyForexUITests;
+			sourceTree = "<group>";
+		};
+		5D327D90278025CE0038ED6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D327DA5278028610038ED6E /* Forex.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D327D91278025D70038ED6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D327DA7278028790038ED6E /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D327D92278025EE0038ED6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D327DA3278028230038ED6E /* ForexDataModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D327D93278026040038ED6E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5D327D98278027630038ED6E /* Resource */,
+				5D327D972780275C0038ED6E /* Request */,
+				5D327DA1278027FC0038ED6E /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5D327D94278026370038ED6E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5D327D952780273A0038ED6E /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		5D327D972780275C0038ED6E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5D327D9D278027C30038ED6E /* NetworkRequest.swift */,
+				5D327D9F278027E40038ED6E /* ForexRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5D327D98278027630038ED6E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5D327D992780277C0038ED6E /* APIResource.swift */,
+				5D327D9B2780279D0038ED6E /* ForexResource.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5D327DA7278028790038ED6E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D327DA8278029230038ED6E /* ForexListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +346,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D327D65278025A50038ED6E /* ViewController.swift in Sources */,
+				5D327DA4278028230038ED6E /* ForexDataModel.swift in Sources */,
 				5D327D61278025A50038ED6E /* AppDelegate.swift in Sources */,
+				5D327DA6278028610038ED6E /* Forex.swift in Sources */,
+				5D327DA2278027FC0038ED6E /* NetworkError.swift in Sources */,
+				5D327DA0278027E40038ED6E /* ForexRequest.swift in Sources */,
+				5D327D9C2780279D0038ED6E /* ForexResource.swift in Sources */,
 				5D327D63278025A50038ED6E /* SceneDelegate.swift in Sources */,
+				5D327D9A2780277C0038ED6E /* APIResource.swift in Sources */,
+				5D327D9E278027C30038ED6E /* NetworkRequest.swift in Sources */,
+				5D327DA9278029230038ED6E /* ForexListViewController.swift in Sources */,
+				5D327D962780273A0038ED6E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

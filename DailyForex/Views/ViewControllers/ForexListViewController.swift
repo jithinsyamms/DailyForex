@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ForexListViewController.swift
 //  DailyForex
 //
 //  Created by Jithin on 01/01/22.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ForexListViewController: UIViewController {
 
+    @IBOutlet weak var forexListView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
 }
-
