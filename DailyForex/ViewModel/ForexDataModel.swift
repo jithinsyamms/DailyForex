@@ -110,4 +110,8 @@ class ForexDataModel:ObservableObject{
         }
         return []
     }
+    
+    func getFloatingNews() ->ForexItem? {
+        return forexDict[sections[0]]?.first
+    }
 }

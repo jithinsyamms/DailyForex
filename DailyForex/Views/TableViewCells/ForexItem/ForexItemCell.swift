@@ -17,12 +17,27 @@ class ForexItemCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setData(forexItem:ForexItem){
+    func setData(forexItem:ForexItem, isFloating:Bool = false){
         forexItemTitle.text = forexItem.title
         forexItemDescription.text = forexItem.description
         authorView.setAuthorDetails(forexItem: forexItem)
         
+        if(isFloating){
+            forexItemTitle.textColor = .white
+            forexItemDescription.textColor = .white
+            
+            forexItemTitle.lineBreakMode = .byTruncatingTail
+            forexItemTitle.numberOfLines = 3
+            
+            forexItemTitle.frame.size.height = 200
+            forexItemDescription.frame.size.height = 200
+            
+            forexItemDescription.lineBreakMode = .byTruncatingTail
+            forexItemDescription.numberOfLines = 3
+        }
+        
         layoutIfNeeded()
+        
     }
     
 }
