@@ -14,6 +14,7 @@ class ForexListViewController: UIViewController {
     @IBOutlet weak var forexListView: UITableView!
     private let forexDataModel = ForexDataModel()
     private var isLoading:Bool = false
+    private var selectedItem:ForexItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,14 @@ class ForexListViewController: UIViewController {
         let backgroundImage = UIImage(named: "Forex")
         let imageView = UIImageView(image: backgroundImage)
         forexListView.backgroundView = imageView
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showForexDetail" {
+            if let detailController = segue.destination as? ForexIemViewController{
+                detailController.forexItem = selectedItem
+            }
+        }
     }
 }
 
@@ -82,8 +91,8 @@ extension ForexListViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let section = forexDataModel.sections[indexPath.section]
-        let forexItem =  forexDataModel.getForexItems(section:section)[indexPath.row]
-                
+        selectedItem =  forexDataModel.getForexItems(section:section)[indexPath.row]
+        performSegue(withIdentifier: "showForexDetail", sender: self)
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

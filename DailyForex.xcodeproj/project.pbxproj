@@ -28,6 +28,7 @@
 		5D327DB927805E110038ED6E /* AuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D327DB827805E110038ED6E /* AuthorView.xib */; };
 		5D327DBB27805E1D0038ED6E /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DBA27805E1D0038ED6E /* AuthorView.swift */; };
 		5D327DC3278068440038ED6E /* ImageView+RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */; };
+		5D327DC72780C7340038ED6E /* ForexIemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DC62780C7340038ED6E /* ForexIemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5D327DB827805E110038ED6E /* AuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorView.xib; sourceTree = "<group>"; };
 		5D327DBA27805E1D0038ED6E /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+RemoteImage.swift"; sourceTree = "<group>"; };
+		5D327DC62780C7340038ED6E /* ForexIemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexIemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				5D327DA8278029230038ED6E /* ForexListViewController.swift */,
+				5D327DC62780C7340038ED6E /* ForexIemViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				5D327D63278025A50038ED6E /* SceneDelegate.swift in Sources */,
 				5D327DC3278068440038ED6E /* ImageView+RemoteImage.swift in Sources */,
 				5D327D9A2780277C0038ED6E /* APIResource.swift in Sources */,
+				5D327DC72780C7340038ED6E /* ForexIemViewController.swift in Sources */,
 				5D327D9E278027C30038ED6E /* NetworkRequest.swift in Sources */,
 				5D327DAD27803DDB0038ED6E /* ForexItemCell.swift in Sources */,
 				5D327DA9278029230038ED6E /* ForexListViewController.swift in Sources */,

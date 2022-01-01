@@ -44,11 +44,28 @@
                     <navigationItem key="navigationItem" title="News Feed" id="EBd-u5-aa7"/>
                     <connections>
                         <outlet property="forexListView" destination="ODR-Hn-hiG" id="q4i-By-eeG"/>
+                        <segue destination="XYs-DW-1u1" kind="show" identifier="showForexDetail" id="KJd-RV-ORd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFm-sf-c7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576.81159420289862" y="67.633928571428569"/>
+        </scene>
+        <!--Forex Iem View Controller-->
+        <scene sceneID="nJq-Jj-nCy">
+            <objects>
+                <viewController id="XYs-DW-1u1" customClass="ForexIemViewController" customModule="DailyForex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xfe-Y1-EWq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kds-2f-d3P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JUR-c8-oRa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxi-2i-NQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1625" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g5i-5h-G5A">
