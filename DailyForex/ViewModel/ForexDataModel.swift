@@ -7,8 +7,13 @@
 
 import Foundation
 
+protocol ForexDataDelegate:AnyObject {
+    func loadingStarted()
+    func loadingFinished()
+}
 
 class ForexDataModel:ObservableObject{
+    
     
     var forex:Forex?
     var sectionTitles:[String] = ["Breaking News", "Top News", "Daily Briefings","Technical Analysis", "Special Report"]
@@ -16,9 +21,8 @@ class ForexDataModel:ObservableObject{
     var errorOccured:Bool = false
     var forexDict:[String:[ForexItem]] = [:]
     
-    init() {
-        fetchForexData()
-    }
+    weak var delegate:ForexDataDelegate?
+    
     
     @Published var isLoading:Bool = false
     
@@ -27,6 +31,7 @@ class ForexDataModel:ObservableObject{
             return
         }
         isLoading = true
+        self.delegate?.loadingStarted()
         let resource = ForexResource()
         let request = ForexRequest(resource: resource)
         request.execute { result in
@@ -38,6 +43,7 @@ class ForexDataModel:ObservableObject{
                 self.errorOccured = true
             }
             DispatchQueue.main.async {
+                self.delegate?.loadingFinished()
                 self.isLoading = false
             }
         }
