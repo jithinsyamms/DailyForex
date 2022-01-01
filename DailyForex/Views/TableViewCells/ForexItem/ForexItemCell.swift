@@ -9,12 +9,9 @@ import UIKit
 
 class ForexItemCell: UITableViewCell {
 
-   
-    @IBOutlet weak var rootStackView: UIStackView!
-    
     @IBOutlet weak var forexItemTitle: UILabel!
-    
     @IBOutlet weak var forexItemDescription: UILabel!
+    @IBOutlet weak var authorView: AuthorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +20,9 @@ class ForexItemCell: UITableViewCell {
     func setData(forexItem:ForexItem){
         forexItemTitle.text = forexItem.title
         forexItemDescription.text = forexItem.description
-        rootStackView.layoutIfNeeded()
+        authorView.setAuthorDetails(forexItem: forexItem)
+        
+        layoutIfNeeded()
     }
     
 }

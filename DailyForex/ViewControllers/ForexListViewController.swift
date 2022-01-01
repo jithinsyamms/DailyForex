@@ -26,7 +26,7 @@ class ForexListViewController: UIViewController {
     
     func setUpView(){
         forexListView.register(UINib.init(nibName: "ForexItemCell", bundle: nil), forCellReuseIdentifier: IDENTIFIER)
-        forexListView.estimatedRowHeight = 150
+        forexListView.estimatedRowHeight = 300
         forexListView.rowHeight = UITableView.automaticDimension
         forexListView.tableFooterView = UIView(frame: CGRect.zero)
         forexListView.showsVerticalScrollIndicator = false
