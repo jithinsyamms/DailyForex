@@ -47,30 +47,19 @@ class AuthorView: UIView {
         }
     }
     
-    func format(forexItem:ForexItem) -> String{
-        if let date = forexItem.displayTimestamp {
-            let dispayData = Date(timeIntervalSince1970: TimeInterval(date))
-            let formatter = DateFormatter()
-            formatter.dateFormat = "H:mm, dd/M/yyyy"
-            return formatter.string(from: dispayData)
-        }
-        return ""
-    }
-    
-    
+
     func formatTime(forexItem:ForexItem) -> String{
         let formatter = DateFormatter()
         formatter.locale = Locale.current
-        if let publish = forexItem.displayTimestamp {
-            let publishedTime = publish/1000
+        formatter.dateFormat = "h:mm a"
+        if let displayTime = forexItem.displayTimestamp {
+            let publishedTime = displayTime/1000
             let date = Date(timeIntervalSince1970: TimeInterval(publishedTime))
             if(Calendar.current.isDateInToday(date)){
-                formatter.dateFormat = "h:mm a"
-                return formatter.string(from: date) + ", Today"
+                return formatter.string(from: date).lowercased() + ", Today"
             }
             else if(Calendar.current.isDateInYesterday(date)){
-                formatter.dateFormat = "h:mm a"
-                return formatter.string(from: date) + ", Yesterday"
+                return formatter.string(from: date).lowercased() + ", Yesterday"
             }
             else{
                 formatter.dateFormat = "h:mm a, d MMM YYY"

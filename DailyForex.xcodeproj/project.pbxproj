@@ -27,8 +27,6 @@
 		5D327DAE27803DDB0038ED6E /* ForexItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D327DAC27803DDB0038ED6E /* ForexItemCell.xib */; };
 		5D327DB927805E110038ED6E /* AuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D327DB827805E110038ED6E /* AuthorView.xib */; };
 		5D327DBB27805E1D0038ED6E /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DBA27805E1D0038ED6E /* AuthorView.swift */; };
-		5D327DBE278061130038ED6E /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D327DBD278061130038ED6E /* DateView.xib */; };
-		5D327DC0278061230038ED6E /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DBF278061230038ED6E /* DateView.swift */; };
 		5D327DC3278068440038ED6E /* ImageView+RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +74,6 @@
 		5D327DAC27803DDB0038ED6E /* ForexItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForexItemCell.xib; sourceTree = "<group>"; };
 		5D327DB827805E110038ED6E /* AuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorView.xib; sourceTree = "<group>"; };
 		5D327DBA27805E1D0038ED6E /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
-		5D327DBD278061130038ED6E /* DateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateView.xib; sourceTree = "<group>"; };
-		5D327DBF278061230038ED6E /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+RemoteImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +171,6 @@
 		5D327D91278025D70038ED6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5D327DBC278060FB0038ED6E /* DateView */,
 				5D327DB127804D4E0038ED6E /* AuthorView */,
 				5D327DAA27803D9C0038ED6E /* TableViewCells */,
 			);
@@ -258,15 +253,6 @@
 				5D327DBA27805E1D0038ED6E /* AuthorView.swift */,
 			);
 			path = AuthorView;
-			sourceTree = "<group>";
-		};
-		5D327DBC278060FB0038ED6E /* DateView */ = {
-			isa = PBXGroup;
-			children = (
-				5D327DBD278061130038ED6E /* DateView.xib */,
-				5D327DBF278061230038ED6E /* DateView.swift */,
-			);
-			path = DateView;
 			sourceTree = "<group>";
 		};
 		5D327DC1278068260038ED6E /* Utils */ = {
@@ -384,7 +370,6 @@
 				5D327DAE27803DDB0038ED6E /* ForexItemCell.xib in Resources */,
 				5D327D6A278025A80038ED6E /* Assets.xcassets in Resources */,
 				5D327D68278025A50038ED6E /* Main.storyboard in Resources */,
-				5D327DBE278061130038ED6E /* DateView.xib in Resources */,
 				5D327DB927805E110038ED6E /* AuthorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +397,6 @@
 			files = (
 				5D327DA4278028230038ED6E /* ForexDataModel.swift in Sources */,
 				5D327D61278025A50038ED6E /* AppDelegate.swift in Sources */,
-				5D327DC0278061230038ED6E /* DateView.swift in Sources */,
 				5D327DA6278028610038ED6E /* Forex.swift in Sources */,
 				5D327DA2278027FC0038ED6E /* NetworkError.swift in Sources */,
 				5D327DBB27805E1D0038ED6E /* AuthorView.swift in Sources */,

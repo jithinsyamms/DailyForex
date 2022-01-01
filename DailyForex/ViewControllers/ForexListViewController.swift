@@ -79,6 +79,13 @@ extension ForexListViewController: UITableViewDataSource{
 
 extension ForexListViewController:UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let section = forexDataModel.sections[indexPath.section]
+        let forexItem =  forexDataModel.getForexItems(section:section)[indexPath.row]
+                
+    }
+    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.textColor = UIColor.white
@@ -88,7 +95,7 @@ extension ForexListViewController:UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+        return 50
     }
 }
 
