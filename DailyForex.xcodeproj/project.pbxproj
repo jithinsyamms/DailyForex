@@ -33,6 +33,7 @@
 		5D5D53FA278173080001161A /* NewsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D53F9278173080001161A /* NewsHeader.swift */; };
 		5D5D53FE278179FB0001161A /* NewsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D53FC278179FB0001161A /* NewsHeaderCell.swift */; };
 		5D5D53FF278179FB0001161A /* NewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D53FD278179FB0001161A /* NewsHeaderCell.xib */; };
+		5D5D5404278206EC0001161A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D5403278206EC0001161A /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		5D5D53F9278173080001161A /* NewsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeader.swift; sourceTree = "<group>"; };
 		5D5D53FC278179FB0001161A /* NewsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderCell.swift; sourceTree = "<group>"; };
 		5D5D53FD278179FB0001161A /* NewsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsHeaderCell.xib; sourceTree = "<group>"; };
+		5D5D5403278206EC0001161A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +144,10 @@
 				5D327D92278025EE0038ED6E /* ViewModel */,
 				5D327D93278026040038ED6E /* Networking */,
 				5D327D94278026370038ED6E /* Constants */,
+				5D5D5402278206C30001161A /* Resources */,
 				5D327D60278025A50038ED6E /* AppDelegate.swift */,
 				5D327D62278025A50038ED6E /* SceneDelegate.swift */,
 				5D327D66278025A50038ED6E /* Main.storyboard */,
-				5D327D69278025A80038ED6E /* Assets.xcassets */,
 				5D327D6B278025A80038ED6E /* LaunchScreen.storyboard */,
 				5D327D6E278025A80038ED6E /* Info.plist */,
 			);
@@ -294,6 +296,15 @@
 			path = NewsHeaderCell;
 			sourceTree = "<group>";
 		};
+		5D5D5402278206C30001161A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D327D69278025A80038ED6E /* Assets.xcassets */,
+				5D5D5403278206EC0001161A /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,6 +413,7 @@
 				5D5D53F8278171BE0001161A /* NewsHeader.xib in Resources */,
 				5D327DAE27803DDB0038ED6E /* ForexItemCell.xib in Resources */,
 				5D327D6A278025A80038ED6E /* Assets.xcassets in Resources */,
+				5D5D5404278206EC0001161A /* Colors.xcassets in Resources */,
 				5D327D68278025A50038ED6E /* Main.storyboard in Resources */,
 				5D327DB927805E110038ED6E /* AuthorView.xib in Resources */,
 			);

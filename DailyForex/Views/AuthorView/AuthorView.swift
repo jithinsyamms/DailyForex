@@ -35,7 +35,7 @@ class AuthorView: UIView {
         authorImage.layer.cornerRadius = 20
     }
     
-    func setAuthorDetails(forexItem:ForexItem){
+    func setAuthorDetails(forexItem:ForexItem, headerNews:Bool = false){
         if let author = forexItem.authors?.first{
             if let photo = author.photo{
                 let placeHolder = UIImage(systemName: "star")
@@ -44,6 +44,17 @@ class AuthorView: UIView {
             authorName.text = author.name
             publishedDate.text = formatTime(forexItem: forexItem)
         }
+        
+        if(headerNews){
+            authorName.textColor = UIColor.init(named: "AuthorNameForHeader")
+            publishedDate.textColor = UIColor.init(named: "DatePublishedForHeader")
+        }
+        else{
+            authorName.textColor = UIColor.init(named: "AuthorName")
+            publishedDate.textColor = UIColor.init(named: "DatePublished")
+        }
+        
+        
     }
     
 

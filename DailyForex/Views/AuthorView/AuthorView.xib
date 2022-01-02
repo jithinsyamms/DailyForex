@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,15 +30,15 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHL-Bd-jJb">
-                    <rect key="frame" x="45" y="44" width="360" height="17"/>
+                    <rect key="frame" x="50" y="44" width="355" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" name="AuthorName"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbx-uM-Kr5">
-                    <rect key="frame" x="45" y="63" width="360" height="16"/>
+                    <rect key="frame" x="50" y="65" width="355" height="16"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="DatePublished"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -48,13 +49,21 @@
                 <constraint firstItem="UfG-CE-2RR" firstAttribute="top" secondItem="HHL-Bd-jJb" secondAttribute="top" id="2C4-yN-cRp"/>
                 <constraint firstItem="HHL-Bd-jJb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JdX-2g-XR7"/>
                 <constraint firstItem="Qbx-uM-Kr5" firstAttribute="trailing" secondItem="HHL-Bd-jJb" secondAttribute="trailing" id="XbW-Ta-KBi"/>
-                <constraint firstItem="Qbx-uM-Kr5" firstAttribute="top" secondItem="HHL-Bd-jJb" secondAttribute="bottom" constant="2" id="ZVz-wt-P7K"/>
+                <constraint firstItem="Qbx-uM-Kr5" firstAttribute="top" secondItem="HHL-Bd-jJb" secondAttribute="bottom" constant="4" id="ZVz-wt-P7K"/>
                 <constraint firstItem="HHL-Bd-jJb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="10" id="fEy-Bz-jcK"/>
                 <constraint firstItem="UfG-CE-2RR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iwJ-Tc-bbh"/>
-                <constraint firstItem="HHL-Bd-jJb" firstAttribute="leading" secondItem="UfG-CE-2RR" secondAttribute="trailing" constant="5" id="ufD-YF-mRY"/>
+                <constraint firstItem="HHL-Bd-jJb" firstAttribute="leading" secondItem="UfG-CE-2RR" secondAttribute="trailing" constant="10" id="ufD-YF-mRY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="34.057971014492757" y="-283.59375"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="AuthorName">
+            <color red="0.070588235294117646" green="0.38039215686274508" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DatePublished">
+            <color red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

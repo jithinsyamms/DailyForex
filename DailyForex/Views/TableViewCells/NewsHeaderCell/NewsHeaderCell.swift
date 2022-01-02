@@ -25,7 +25,7 @@ class NewsHeaderCell: UITableViewCell {
     func setData(forexItem:ForexItem){
         forexItemTitle.text = forexItem.title
         forexItemDescription.text = forexItem.description
-        authorView.setAuthorDetails(forexItem: forexItem)
+        authorView.setAuthorDetails(forexItem: forexItem,headerNews: true)
     }
     
 }
