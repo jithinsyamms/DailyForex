@@ -18,30 +18,30 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-IU-iqr">
-                        <rect key="frame" x="0.0" y="20" width="359" height="192"/>
+                        <rect key="frame" x="0.0" y="20" width="364" height="192"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-hu-6Ze">
-                                <rect key="frame" x="0.0" y="0.0" width="359" height="192"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-hu-6Ze">
+                                <rect key="frame" x="0.0" y="0.0" width="364" height="192"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-xy-NGn">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="101.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E08-sZ-lje">
-                                        <rect key="frame" x="0.0" y="44" width="359" height="73"/>
+                                        <rect key="frame" x="0.0" y="106.5" width="364" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMz-kr-cB7">
-                                        <rect key="frame" x="0.0" y="122" width="359" height="70"/>
+                                        <rect key="frame" x="0.0" y="132" width="364" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmq-6K-P9u" customClass="AuthorView" customModule="DailyForex" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="10" width="359" height="60"/>
+                                                <rect key="frame" x="0.0" y="10" width="364" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="1Ha-bM-7h1"/>
+                                                    <constraint firstAttribute="height" constant="50" id="1Ha-bM-7h1"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -69,7 +69,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="gEZ-IU-iqr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="2Qo-mj-UOw"/>
-                    <constraint firstAttribute="trailing" secondItem="gEZ-IU-iqr" secondAttribute="trailing" constant="35" id="WJw-4R-xkZ"/>
+                    <constraint firstAttribute="trailing" secondItem="gEZ-IU-iqr" secondAttribute="trailing" constant="30" id="WJw-4R-xkZ"/>
                     <constraint firstAttribute="bottom" secondItem="gEZ-IU-iqr" secondAttribute="bottom" id="gF7-Hu-ESP"/>
                     <constraint firstItem="gEZ-IU-iqr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rbS-nY-3PJ"/>
                 </constraints>
