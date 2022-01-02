@@ -43,7 +43,6 @@ class AuthorView: UIView {
             }
             authorName.text = author.name
             publishedDate.text = formatTime(forexItem: forexItem)
-            
         }
     }
     

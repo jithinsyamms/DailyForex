@@ -29,6 +29,10 @@
 		5D327DBB27805E1D0038ED6E /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DBA27805E1D0038ED6E /* AuthorView.swift */; };
 		5D327DC3278068440038ED6E /* ImageView+RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */; };
 		5D327DC72780C7340038ED6E /* ForexIemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327DC62780C7340038ED6E /* ForexIemViewController.swift */; };
+		5D5D53F8278171BE0001161A /* NewsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D53F7278171BE0001161A /* NewsHeader.xib */; };
+		5D5D53FA278173080001161A /* NewsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D53F9278173080001161A /* NewsHeader.swift */; };
+		5D5D53FE278179FB0001161A /* NewsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D53FC278179FB0001161A /* NewsHeaderCell.swift */; };
+		5D5D53FF278179FB0001161A /* NewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D53FD278179FB0001161A /* NewsHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		5D327DBA27805E1D0038ED6E /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+RemoteImage.swift"; sourceTree = "<group>"; };
 		5D327DC62780C7340038ED6E /* ForexIemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForexIemViewController.swift; sourceTree = "<group>"; };
+		5D5D53F7278171BE0001161A /* NewsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsHeader.xib; sourceTree = "<group>"; };
+		5D5D53F9278173080001161A /* NewsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeader.swift; sourceTree = "<group>"; };
+		5D5D53FC278179FB0001161A /* NewsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderCell.swift; sourceTree = "<group>"; };
+		5D5D53FD278179FB0001161A /* NewsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,7 @@
 		5D327D91278025D70038ED6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5D5D53F62781709E0001161A /* NewsHeader */,
 				5D327DB127804D4E0038ED6E /* AuthorView */,
 				5D327DAA27803D9C0038ED6E /* TableViewCells */,
 			);
@@ -235,6 +244,7 @@
 		5D327DAA27803D9C0038ED6E /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				5D5D53FB278179DD0001161A /* NewsHeaderCell */,
 				5D327DAF27803DE10038ED6E /* ForexItem */,
 			);
 			path = TableViewCells;
@@ -264,6 +274,24 @@
 				5D327DC2278068440038ED6E /* ImageView+RemoteImage.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D5D53F62781709E0001161A /* NewsHeader */ = {
+			isa = PBXGroup;
+			children = (
+				5D5D53F7278171BE0001161A /* NewsHeader.xib */,
+				5D5D53F9278173080001161A /* NewsHeader.swift */,
+			);
+			path = NewsHeader;
+			sourceTree = "<group>";
+		};
+		5D5D53FB278179DD0001161A /* NewsHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				5D5D53FC278179FB0001161A /* NewsHeaderCell.swift */,
+				5D5D53FD278179FB0001161A /* NewsHeaderCell.xib */,
+			);
+			path = NewsHeaderCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +397,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5D53FF278179FB0001161A /* NewsHeaderCell.xib in Resources */,
 				5D327D6D278025A80038ED6E /* LaunchScreen.storyboard in Resources */,
+				5D5D53F8278171BE0001161A /* NewsHeader.xib in Resources */,
 				5D327DAE27803DDB0038ED6E /* ForexItemCell.xib in Resources */,
 				5D327D6A278025A80038ED6E /* Assets.xcassets in Resources */,
 				5D327D68278025A50038ED6E /* Main.storyboard in Resources */,
@@ -399,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D327DA4278028230038ED6E /* ForexDataModel.swift in Sources */,
+				5D5D53FA278173080001161A /* NewsHeader.swift in Sources */,
 				5D327D61278025A50038ED6E /* AppDelegate.swift in Sources */,
 				5D327DA6278028610038ED6E /* Forex.swift in Sources */,
 				5D327DA2278027FC0038ED6E /* NetworkError.swift in Sources */,
@@ -410,6 +441,7 @@
 				5D327D9A2780277C0038ED6E /* APIResource.swift in Sources */,
 				5D327DC72780C7340038ED6E /* ForexIemViewController.swift in Sources */,
 				5D327D9E278027C30038ED6E /* NetworkRequest.swift in Sources */,
+				5D5D53FE278179FB0001161A /* NewsHeaderCell.swift in Sources */,
 				5D327DAD27803DDB0038ED6E /* ForexItemCell.swift in Sources */,
 				5D327DA9278029230038ED6E /* ForexListViewController.swift in Sources */,
 				5D327D962780273A0038ED6E /* Constants.swift in Sources */,

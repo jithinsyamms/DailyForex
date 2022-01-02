@@ -54,8 +54,8 @@ extension ForexListViewController: ForexDataDelegate{
     
     func loadingFinished() {
         isLoading = false
-        if let headerView = Bundle.main.loadNibNamed(IDENTIFIER, owner: nil, options: nil)?.first as? ForexItemCell, let floatingItem = forexDataModel.getFloatingNews(){
-            headerView.setData(forexItem: floatingItem, isFloating: true)
+        if let headerView = Bundle.main.loadNibNamed("NewsHeaderCell", owner: nil, options: nil)?.first as? NewsHeaderCell, let floatingItem = forexDataModel.getFloatingNews(){
+            headerView.setData(forexItem: floatingItem)
             self.forexListView.tableHeaderView = headerView
         }
         self.forexListView.reloadData()
