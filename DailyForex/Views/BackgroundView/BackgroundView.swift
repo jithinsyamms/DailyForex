@@ -28,6 +28,7 @@ class BackgroundView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        errorLabel.text = "ERROR_LOADING_DATA".localized
     }
     
     func setLoading(){

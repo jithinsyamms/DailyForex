@@ -7,4 +7,5 @@
 */
 
 "NEWS_FEED" = "Neuigkeiten";
-"FETCHING_NEWS" = "Fetching News Feed...";
+"FETCHING_NEWS" = "Newsfeed wird abgerufen...";
+"ERROR_LOADING_DATA" = "Daten können nicht abgerufen werden....";

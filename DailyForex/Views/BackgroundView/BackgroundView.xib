@@ -32,8 +32,8 @@
                     </constraints>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to fetch news..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1o-7w-MB5">
-                    <rect key="frame" x="95" y="436" width="224" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to fetch news..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1o-7w-MB5">
+                    <rect key="frame" x="20" y="436" width="374" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -45,11 +45,12 @@
                 <constraint firstItem="jhp-AT-Hz7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="07U-DV-lyI"/>
                 <constraint firstItem="fvq-La-QYg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="HON-kS-A5Q"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fvq-La-QYg" secondAttribute="trailing" id="KYf-oW-tZp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W1o-7w-MB5" secondAttribute="trailing" constant="20" id="O17-Lw-NhM"/>
                 <constraint firstItem="W1o-7w-MB5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XEG-IH-RIf"/>
-                <constraint firstItem="W1o-7w-MB5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b9B-a3-QQv"/>
                 <constraint firstItem="jhp-AT-Hz7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="it2-XM-eLw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fvq-La-QYg" secondAttribute="bottom" id="rnk-n3-4k9"/>
                 <constraint firstItem="fvq-La-QYg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xDw-zW-NSf"/>
+                <constraint firstItem="W1o-7w-MB5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="yKh-R2-De1"/>
             </constraints>
             <point key="canvasLocation" x="114" y="70"/>
         </view>

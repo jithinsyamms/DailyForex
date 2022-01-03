@@ -7,4 +7,5 @@
 */
 
 "NEWS_FEED" = "Fil d'actualité";
-"FETCHING_NEWS" = "Fetching News Feed...";
+"FETCHING_NEWS" = "Récupération du fil d'actualité...";
+"ERROR_LOADING_DATA" = "Impossible de récupérer les données....";
