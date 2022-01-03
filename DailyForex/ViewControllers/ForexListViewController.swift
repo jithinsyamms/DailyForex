@@ -26,6 +26,7 @@ class ForexListViewController: UIViewController {
     
     
     func setUpView(){
+        setNavigatiionBar()
         forexListView.register(UINib.init(nibName: "ForexItemCell", bundle: nil), forCellReuseIdentifier: IDENTIFIER)
         forexListView.estimatedRowHeight = 300
         forexListView.rowHeight = UITableView.automaticDimension
@@ -35,6 +36,10 @@ class ForexListViewController: UIViewController {
         let backgroundImage = UIImage(named: "Forex")
         let imageView = UIImageView(image: backgroundImage)
         forexListView.backgroundView = imageView
+    }
+    
+    func setNavigatiionBar(){
+        self.title = "NEWS_FEED".localized
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

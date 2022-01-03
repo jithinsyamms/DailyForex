@@ -1,9 +1,9 @@
 /* 
-  Localization.strings
+  Localizable.strings
   DailyForex
 
   Created by Jithin on 03/01/22.
   
 */
 
-"NewsFeed" = "Fil d'actualité";
+"NEWS_FEED" = "Neuigkeiten";
