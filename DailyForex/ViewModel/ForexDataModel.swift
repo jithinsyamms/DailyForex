@@ -14,12 +14,14 @@ protocol ForexDataDelegate:AnyObject {
 
 class ForexDataModel:ObservableObject{
     
-    
+
     var forex:Forex?
     var sectionTitles:[String] = ["Breaking News", "Top News", "Daily Briefings","Technical Analysis", "Special Report"]
     var sections:[String]  = []
     var errorOccured:Bool = false
     var forexDict:[String:[ForexItem]] = [:]
+    var headerNews:ForexItem?
+    
     
     weak var delegate:ForexDataDelegate?
     
@@ -61,15 +63,23 @@ class ForexDataModel:ObservableObject{
     }
     
     func setBreakingNews(forex:Forex){
-        if let breaking = forex.breakingNews, breaking.count > 0{
-            sections.append(sectionTitles[0])
-            forexDict[sectionTitles[0]] = breaking
+        if var breaking = forex.breakingNews, breaking.count > 0{
+            headerNews = breaking.removeFirst()
+            if breaking.count > 0{
+                sections.append(sectionTitles[0])
+                forexDict[sectionTitles[0]] = breaking
+            }
         }
     }
     func setTopNews(forex:Forex){
-        if let topNews = forex.topNews, topNews.count > 0{
-            sections.append(sectionTitles[1])
-            forexDict[sectionTitles[1]] = topNews
+        if var topNews = forex.topNews, topNews.count > 0{
+            if headerNews == nil {
+                headerNews = topNews.removeFirst()
+            }
+            if topNews.count > 0 {
+                sections.append(sectionTitles[1])
+                forexDict[sectionTitles[1]] = topNews
+            }
         }
     }
     func setDialyBriefings(forex:Forex){
@@ -112,6 +122,6 @@ class ForexDataModel:ObservableObject{
     }
     
     func getFloatingNews() ->ForexItem? {
-        return forexDict[sections[0]]?.first
+        return headerNews
     }
 }
