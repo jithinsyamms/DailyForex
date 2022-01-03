@@ -88,6 +88,9 @@ extension ForexListViewController: ForexDataDelegate {
         if let headerView = Bundle.main.loadNibNamed("NewsHeaderCell", owner: nil, options: nil)?.first
             as? NewsHeaderCell, let floatingItem = forexDataModel.getFloatingNews() {
             headerView.setData(forexItem: floatingItem)
+            headerView.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.headerNewsClicked))
+            headerView.addGestureRecognizer(tap)
             self.forexListView.tableHeaderView = headerView
         }
         self.forexListView.reloadData()
@@ -95,6 +98,11 @@ extension ForexListViewController: ForexDataDelegate {
 
     func errorLoadingData() {
         backgroundView.setLoadingError()
+    }
+
+    @objc func headerNewsClicked() {
+        selectedItem =  forexDataModel.getFloatingNews()
+        performSegue(withIdentifier: "showForexDetail", sender: self)
     }
 
 }
@@ -144,4 +152,5 @@ extension ForexListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
+
 }
