@@ -16,6 +16,8 @@ class ForexListViewController: UIViewController {
     private var isLoading:Bool = false
     private var selectedItem:ForexItem!
     
+    private let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -32,11 +34,12 @@ class ForexListViewController: UIViewController {
         forexListView.rowHeight = UITableView.automaticDimension
         forexListView.tableFooterView = UIView(frame: CGRect.zero)
         forexListView.showsVerticalScrollIndicator = false
-        
+        setRefreshControl()
         let backgroundImage = UIImage(named: "Forex")
         let imageView = UIImageView(image: backgroundImage)
         forexListView.backgroundView = imageView
     }
+    
     
     func setNavigatiionBar(){
         
@@ -52,7 +55,19 @@ class ForexListViewController: UIViewController {
         self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
+    func setRefreshControl(){
+        forexListView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshNewsFeed(_:)), for: .valueChanged)
+        refreshControl.tintColor = UIColor.white
+        let stringAttributes = [ NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16)]
+        refreshControl.attributedTitle = NSAttributedString(string: "FETCHING_NEWS".localized, attributes: stringAttributes)
+    }
     
+    @objc func refreshNewsFeed(_ sender: Any){
+        forexDataModel.fetchForexData()
+    }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showForexDetail" {
             if let detailController = segue.destination as? ForexIemViewController{
@@ -70,6 +85,7 @@ extension ForexListViewController: ForexDataDelegate{
     
     func loadingFinished() {
         isLoading = false
+        self.refreshControl.endRefreshing()
         if let headerView = Bundle.main.loadNibNamed("NewsHeaderCell", owner: nil, options: nil)?.first as? NewsHeaderCell, let floatingItem = forexDataModel.getFloatingNews(){
             headerView.setData(forexItem: floatingItem)
             self.forexListView.tableHeaderView = headerView

@@ -55,11 +55,18 @@ class ForexDataModel:ObservableObject{
         guard let forex = forex else {
             return
         }
+        clearData()
         setBreakingNews(forex: forex)
         setTopNews(forex: forex)
         setDialyBriefings(forex: forex)
         setTechnicalAnalysis(forex: forex)
         setSpecialReports(forex: forex)
+    }
+    
+    func clearData(){
+        sections.removeAll()
+        forexDict.removeAll()
+        headerNews = nil
     }
     
     func setBreakingNews(forex:Forex){

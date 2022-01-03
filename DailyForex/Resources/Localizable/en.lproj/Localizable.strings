@@ -7,3 +7,4 @@
 */
 
 "NEWS_FEED" = "News Feed";
+"FETCHING_NEWS" = "Fetching News Feed...";
