@@ -15,6 +15,7 @@ class ForexListViewController: UIViewController {
     private let forexDataModel = ForexDataModel()
     private var isLoading:Bool = false
     private var selectedItem:ForexItem!
+    private var backgroundView:BackgroundView!
     
     private let refreshControl = UIRefreshControl()
     
@@ -34,10 +35,9 @@ class ForexListViewController: UIViewController {
         forexListView.rowHeight = UITableView.automaticDimension
         forexListView.tableFooterView = UIView(frame: CGRect.zero)
         forexListView.showsVerticalScrollIndicator = false
+        backgroundView = BackgroundView()
+        forexListView.backgroundView = backgroundView
         setRefreshControl()
-        let backgroundImage = UIImage(named: "Forex")
-        let imageView = UIImageView(image: backgroundImage)
-        forexListView.backgroundView = imageView
     }
     
     
@@ -50,7 +50,7 @@ class ForexListViewController: UIViewController {
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.8)
+        navBarAppearance.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5)
         self.navigationController?.navigationBar.standardAppearance = navBarAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
@@ -81,10 +81,14 @@ extension ForexListViewController: ForexDataDelegate{
     func loadingStarted() {
         isLoading = true
         self.forexListView.reloadData()
+        backgroundView.setLoading()
     }
     
     func loadingFinished() {
         isLoading = false
+        if forexDataModel.sections.count > 0{
+            backgroundView.setLoadingCompleted()
+        }
         self.refreshControl.endRefreshing()
         if let headerView = Bundle.main.loadNibNamed("NewsHeaderCell", owner: nil, options: nil)?.first as? NewsHeaderCell, let floatingItem = forexDataModel.getFloatingNews(){
             headerView.setData(forexItem: floatingItem)
@@ -92,6 +96,12 @@ extension ForexListViewController: ForexDataDelegate{
         }
         self.forexListView.reloadData()
     }
+    
+    func errorLoadingData() {
+        backgroundView.setLoadingError()
+    }
+    
+    
 }
 
 extension ForexListViewController: UITableViewDataSource{

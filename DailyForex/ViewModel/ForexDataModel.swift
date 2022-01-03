@@ -10,23 +10,20 @@ import Foundation
 protocol ForexDataDelegate:AnyObject {
     func loadingStarted()
     func loadingFinished()
+    func errorLoadingData()
 }
 
 class ForexDataModel:ObservableObject{
     
-
     var forex:Forex?
     var sectionTitles:[String] = ["Breaking News", "Top News", "Daily Briefings","Technical Analysis", "Special Report"]
     var sections:[String]  = []
-    var errorOccured:Bool = false
     var forexDict:[String:[ForexItem]] = [:]
     var headerNews:ForexItem?
-    
-    
+    var isLoading:Bool = false
+    var dataLoadedOnce  = false
     weak var delegate:ForexDataDelegate?
     
-    
-    @Published var isLoading:Bool = false
     
     func fetchForexData(){
         guard !isLoading else {
@@ -39,10 +36,15 @@ class ForexDataModel:ObservableObject{
         request.execute { result in
             switch result{
             case .success(let forex):
+                self.dataLoadedOnce = true
                 self.forex = forex
                 self.setForexData()
             case .failure( _):
-                self.errorOccured = true
+                DispatchQueue.main.async {
+                    if !self.dataLoadedOnce{
+                        self.delegate?.errorLoadingData()
+                    }
+                }
             }
             DispatchQueue.main.async {
                 self.delegate?.loadingFinished()
