@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension String{
-    
-    var localized:String{
+extension String {
+
+    var localized: String {
         NSLocalizedString(self, comment: "")
     }
-    
-    func localized(comment:String) -> String{
+
+    func localized(comment: String) -> String {
         return NSLocalizedString(self, comment: comment)
     }
 }

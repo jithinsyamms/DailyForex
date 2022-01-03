@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol ForexDataDelegate:AnyObject {
+protocol ForexDataDelegate: AnyObject {
     func loadingStarted()
     func loadingFinished()
     func errorLoadingData()
 }
 
-class ForexDataModel:ObservableObject{
-    
-    var forex:Forex?
-    var sectionTitles:[String] = ["Breaking News", "Top News", "Daily Briefings","Technical Analysis", "Special Report"]
-    var sections:[String]  = []
-    var forexDict:[String:[ForexItem]] = [:]
-    var headerNews:ForexItem?
-    var isLoading:Bool = false
+class ForexDataModel: ObservableObject {
+
+    var forex: Forex?
+    var sectionTitles: [String] = ["Breaking News", "Top News", "Daily Briefings",
+                                   "Technical Analysis", "Special Report"]
+    var sections: [String]  = []
+    var forexDict: [String: [ForexItem]] = [:]
+    var headerNews: ForexItem?
+    var isLoading: Bool = false
     var dataLoadedOnce  = false
-    weak var delegate:ForexDataDelegate?
-    
-    
-    func fetchForexData(){
+    weak var delegate: ForexDataDelegate?
+
+    func fetchForexData() {
         guard !isLoading else {
             return
         }
@@ -34,14 +34,14 @@ class ForexDataModel:ObservableObject{
         let resource = ForexResource()
         let request = ForexRequest(resource: resource)
         request.execute { result in
-            switch result{
+            switch result {
             case .success(let forex):
                 self.dataLoadedOnce = true
                 self.forex = forex
                 self.setForexData()
-            case .failure( _):
+            case .failure:
                 DispatchQueue.main.async {
-                    if !self.dataLoadedOnce{
+                    if !self.dataLoadedOnce {
                         self.delegate?.errorLoadingData()
                     }
                 }
@@ -52,8 +52,8 @@ class ForexDataModel:ObservableObject{
             }
         }
     }
-    
-    func setForexData(){
+
+    func setForexData() {
         guard let forex = forex else {
             return
         }
@@ -64,24 +64,24 @@ class ForexDataModel:ObservableObject{
         setTechnicalAnalysis(forex: forex)
         setSpecialReports(forex: forex)
     }
-    
-    func clearData(){
+
+    func clearData() {
         sections.removeAll()
         forexDict.removeAll()
         headerNews = nil
     }
-    
-    func setBreakingNews(forex:Forex){
-        if var breaking = forex.breakingNews, breaking.count > 0{
+
+    func setBreakingNews(forex: Forex) {
+        if var breaking = forex.breakingNews, breaking.count > 0 {
             headerNews = breaking.removeFirst()
-            if breaking.count > 0{
+            if breaking.count > 0 {
                 sections.append(sectionTitles[0])
                 forexDict[sectionTitles[0]] = breaking
             }
         }
     }
-    func setTopNews(forex:Forex){
-        if var topNews = forex.topNews, topNews.count > 0{
+    func setTopNews(forex: Forex) {
+        if var topNews = forex.topNews, topNews.count > 0 {
             if headerNews == nil {
                 headerNews = topNews.removeFirst()
             }
@@ -91,46 +91,46 @@ class ForexDataModel:ObservableObject{
             }
         }
     }
-    func setDialyBriefings(forex:Forex){
-        
-        var briefings:[ForexItem] = []
-        if let eu = forex.dailyBriefings.eu{
-            briefings.append(contentsOf: eu)
+    func setDialyBriefings(forex: Forex) {
+
+        var briefings: [ForexItem] = []
+        if let euData = forex.dailyBriefings.euData {
+            briefings.append(contentsOf: euData)
         }
-        if let asia = forex.dailyBriefings.asia{
+        if let asia = forex.dailyBriefings.asia {
             briefings.append(contentsOf: asia)
         }
-        if let us = forex.dailyBriefings.us{
-            briefings.append(contentsOf: us)
+        if let usData = forex.dailyBriefings.usData {
+            briefings.append(contentsOf: usData)
         }
-        
-        if briefings.count > 0{
+
+        if briefings.count > 0 {
             sections.append(sectionTitles[2])
             forexDict[sectionTitles[2]] = briefings
         }
-        
+
     }
-    func setTechnicalAnalysis(forex:Forex){
-        if let technical = forex.technicalAnalysis, technical.count > 0{
+    func setTechnicalAnalysis(forex: Forex) {
+        if let technical = forex.technicalAnalysis, technical.count > 0 {
             sections.append(sectionTitles[3])
             forexDict[sectionTitles[3]] = technical
         }
     }
-    func setSpecialReports(forex:Forex){
-        if let special = forex.specialReport, special.count > 0{
+    func setSpecialReports(forex: Forex) {
+        if let special = forex.specialReport, special.count > 0 {
             sections.append(sectionTitles[4])
             forexDict[sectionTitles[4]] = special
         }
     }
-    
-    func getForexItems(section:String) -> [ForexItem]{
+
+    func getForexItems(section: String) -> [ForexItem] {
         if let items = forexDict[section] {
             return items
         }
         return []
     }
-    
-    func getFloatingNews() ->ForexItem? {
+
+    func getFloatingNews() -> ForexItem? {
         return headerNews
     }
 }

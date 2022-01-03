@@ -12,36 +12,36 @@ class BackgroundView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
-    func commonInit(){
+
+    func commonInit() {
         Bundle.main.loadNibNamed("BackgroundView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         errorLabel.text = "ERROR_LOADING_DATA".localized
     }
-    
-    func setLoading(){
+
+    func setLoading() {
         activityIndicator.isHidden = false
         errorLabel.isHidden = true
     }
-    
-    func setLoadingCompleted(){
+
+    func setLoadingCompleted() {
         activityIndicator.isHidden = true
         errorLabel.isHidden = true
     }
-    
-    func setLoadingError(){
+
+    func setLoadingError() {
         activityIndicator.isHidden = true
         errorLabel.isHidden = false
     }

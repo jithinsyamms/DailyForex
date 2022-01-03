@@ -8,18 +8,17 @@
 import Foundation
 
 protocol APIResource {
-    associatedtype Model:Codable
-    var scheme:String {get}
-    var baseURL:String {get}
-    var path:String {get}
-    var method:String {get}
-    var parameters:[URLQueryItem] {get}
-    var headers:[URLQueryItem] {get}
+    associatedtype Model: Codable
+    var scheme: String {get}
+    var baseURL: String {get}
+    var path: String {get}
+    var method: String {get}
+    var parameters: [URLQueryItem] {get}
+    var headers: [URLQueryItem] {get}
 }
 
-extension APIResource{
-    
-    var URL:URL?{
+extension APIResource {
+    var URL: URL? {
         var components = URLComponents()
         components.scheme = scheme
         components.host = baseURL
@@ -27,11 +26,11 @@ extension APIResource{
         components.queryItems = parameters
         return components.url
     }
-    
-    var parameters:[URLQueryItem]{
+
+    var parameters: [URLQueryItem] {
         return []
     }
-    var headers:[URLQueryItem]{
+    var headers: [URLQueryItem] {
         return []
     }
 }

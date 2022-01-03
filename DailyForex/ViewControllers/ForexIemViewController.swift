@@ -11,19 +11,18 @@ import WebKit
 class ForexIemViewController: UIViewController, WKNavigationDelegate {
 
     var webView: WKWebView!
-    
-    var forexItem:ForexItem?
-    
+    var forexItem: ForexItem?
+
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        if let url = URL(string: forexItem?.url ?? ""){
+        if let url = URL(string: forexItem?.url ?? "") {
             webView.load(URLRequest(url: url))
             webView.allowsBackForwardNavigationGestures = true
         }

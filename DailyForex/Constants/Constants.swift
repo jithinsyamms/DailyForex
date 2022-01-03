@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Constants{
+class Constants {
     static var BaseURL = "content.dailyfx.com"
 }
