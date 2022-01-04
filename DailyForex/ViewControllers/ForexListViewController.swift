@@ -44,9 +44,10 @@ class ForexListViewController: UIViewController {
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5)
+        navBarAppearance.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.8)
         self.navigationController?.navigationBar.standardAppearance = navBarAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     func setRefreshControl() {

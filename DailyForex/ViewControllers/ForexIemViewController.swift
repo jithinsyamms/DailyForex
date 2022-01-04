@@ -26,6 +26,9 @@ class ForexIemViewController: UIViewController, WKNavigationDelegate {
             webView.load(URLRequest(url: url))
             webView.allowsBackForwardNavigationGestures = true
         }
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.8)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
 }
