@@ -12,7 +12,6 @@
 		5D327D68278025A50038ED6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D327D66278025A50038ED6E /* Main.storyboard */; };
 		5D327D6A278025A80038ED6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D327D69278025A80038ED6E /* Assets.xcassets */; };
 		5D327D6D278025A80038ED6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D327D6B278025A80038ED6E /* LaunchScreen.storyboard */; };
-		5D327D78278025A80038ED6E /* DailyForexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D77278025A80038ED6E /* DailyForexTests.swift */; };
 		5D327D83278025A80038ED6E /* DailyForexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D82278025A80038ED6E /* DailyForexUITests.swift */; };
 		5D327D962780273A0038ED6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D952780273A0038ED6E /* Constants.swift */; };
 		5D327D9A2780277C0038ED6E /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D327D992780277C0038ED6E /* APIResource.swift */; };
@@ -38,6 +37,12 @@
 		5D5D54142782DBCE0001161A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D54162782DBCE0001161A /* Localizable.strings */; };
 		5D5D541B278356FD0001161A /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D541A278356FD0001161A /* BackgroundView.xib */; };
 		5D5D541D278357C60001161A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D541C278357C60001161A /* BackgroundView.swift */; };
+		5D850B8A2784226D0049C5D5 /* DailyForexURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D850B892784226D0049C5D5 /* DailyForexURLTests.swift */; };
+		5D850B8C27842E1A0049C5D5 /* DailyForexNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D850B8B27842E1A0049C5D5 /* DailyForexNetworkTest.swift */; };
+		5D850B90278464E60049C5D5 /* DailyForexInvalidNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D850B8F278464E60049C5D5 /* DailyForexInvalidNetworkTest.swift */; };
+		5D850B922784681C0049C5D5 /* DailyForexParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D850B912784681C0049C5D5 /* DailyForexParseTest.swift */; };
+		5D850B94278469460049C5D5 /* forex.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D850B93278469460049C5D5 /* forex.json */; };
+		5D850B96278496C40049C5D5 /* DailyForexViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D850B95278496C40049C5D5 /* DailyForexViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +71,6 @@
 		5D327D6C278025A80038ED6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D327D6E278025A80038ED6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D327D73278025A80038ED6E /* DailyForexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyForexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D327D77278025A80038ED6E /* DailyForexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexTests.swift; sourceTree = "<group>"; };
 		5D327D79278025A80038ED6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D327D7E278025A80038ED6E /* DailyForexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyForexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D327D82278025A80038ED6E /* DailyForexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexUITests.swift; sourceTree = "<group>"; };
@@ -97,6 +101,12 @@
 		5D5D54182782DBD20001161A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D5D541A278356FD0001161A /* BackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 		5D5D541C278357C60001161A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		5D850B892784226D0049C5D5 /* DailyForexURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexURLTests.swift; sourceTree = "<group>"; };
+		5D850B8B27842E1A0049C5D5 /* DailyForexNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexNetworkTest.swift; sourceTree = "<group>"; };
+		5D850B8F278464E60049C5D5 /* DailyForexInvalidNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexInvalidNetworkTest.swift; sourceTree = "<group>"; };
+		5D850B912784681C0049C5D5 /* DailyForexParseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexParseTest.swift; sourceTree = "<group>"; };
+		5D850B93278469460049C5D5 /* forex.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forex.json; sourceTree = "<group>"; };
+		5D850B95278496C40049C5D5 /* DailyForexViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForexViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +177,13 @@
 		5D327D76278025A80038ED6E /* DailyForexTests */ = {
 			isa = PBXGroup;
 			children = (
-				5D327D77278025A80038ED6E /* DailyForexTests.swift */,
+				5D850B892784226D0049C5D5 /* DailyForexURLTests.swift */,
+				5D850B8B27842E1A0049C5D5 /* DailyForexNetworkTest.swift */,
+				5D850B8F278464E60049C5D5 /* DailyForexInvalidNetworkTest.swift */,
+				5D850B912784681C0049C5D5 /* DailyForexParseTest.swift */,
+				5D850B95278496C40049C5D5 /* DailyForexViewModelTest.swift */,
 				5D327D79278025A80038ED6E /* Info.plist */,
+				5D850B93278469460049C5D5 /* forex.json */,
 			);
 			path = DailyForexTests;
 			sourceTree = "<group>";
@@ -458,6 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D850B94278469460049C5D5 /* forex.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +537,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D327D78278025A80038ED6E /* DailyForexTests.swift in Sources */,
+				5D850B8A2784226D0049C5D5 /* DailyForexURLTests.swift in Sources */,
+				5D850B90278464E60049C5D5 /* DailyForexInvalidNetworkTest.swift in Sources */,
+				5D850B96278496C40049C5D5 /* DailyForexViewModelTest.swift in Sources */,
+				5D850B922784681C0049C5D5 /* DailyForexParseTest.swift in Sources */,
+				5D850B8C27842E1A0049C5D5 /* DailyForexNetworkTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

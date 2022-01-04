@@ -60,7 +60,7 @@ class ForexDataModel: ObservableObject {
         clearData()
         setBreakingNews(forex: forex)
         setTopNews(forex: forex)
-        setDialyBriefings(forex: forex)
+        setDailyBriefings(forex: forex)
         setTechnicalAnalysis(forex: forex)
         setSpecialReports(forex: forex)
     }
@@ -91,7 +91,7 @@ class ForexDataModel: ObservableObject {
             }
         }
     }
-    func setDialyBriefings(forex: Forex) {
+    func setDailyBriefings(forex: Forex) {
 
         var briefings: [ForexItem] = []
         if let euData = forex.dailyBriefings.euData {
