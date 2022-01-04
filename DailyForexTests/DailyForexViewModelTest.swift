@@ -28,6 +28,7 @@ class DailyForexViewModelTest: XCTestCase {
         XCTAssertGreaterThan(viewModel.forexDict.count, 0)
         XCTAssertNotNil(viewModel.headerNews)
         for section in viewModel.sections {
+            XCTAssertNotNil(viewModel.getForexItems(section: section))
             XCTAssertGreaterThan(viewModel.getForexItems(section: section).count, 0)
         }
     }
