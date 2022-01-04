@@ -16,6 +16,7 @@ class ForexListViewController: UIViewController {
     private var selectedItem: ForexItem!
     private var backgroundView: BackgroundView!
     private let refreshControl = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
